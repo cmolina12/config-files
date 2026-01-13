@@ -1,0 +1,67 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "zoomed_padding": true,
+  "notification_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "project_panel": {
+    "dock": "right"
+  },
+  "agent": {
+    "always_allow_tool_actions": true,
+    "dock": "left",
+    "default_profile": "write",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-opus-4.5"
+    },
+    "model_parameters": []
+  },
+  "cursor_shape": "bar",
+  "ui_font_family": ".ZedSans",
+  "icon_theme": "Symbols Icon Theme",
+  "terminal": {
+    "font_family": "MesloLGS NF"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "base_keymap": "VSCode",
+  "minimap": {
+    "show": "auto"
+  },
+  "cursor_blink": true,
+  "buffer_font_fallbacks": [
+    "JetBrains Mono",
+    "Menlo",
+    "Monaco",
+    "Courier New",
+    "monospace"
+  ],
+  "buffer_font_family": "Geist Mono",
+  "soft_wrap": "editor_width",
+  "ui_font_size": 16,
+  "buffer_font_size": 14.0,
+  "theme": {
+    "mode": "dark",
+    "light": "Gruvbox Light Hard",
+    "dark": "Github Dark"
+  }
+}
