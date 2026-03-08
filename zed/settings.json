@@ -26,10 +26,10 @@
   "agent": {
     "always_allow_tool_actions": true,
     "dock": "left",
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "claude-opus-4.5"
+      "provider": "zed.dev",
+      "model": "claude-opus-4-5"
     },
     "model_parameters": []
   },
@@ -62,6 +62,6 @@
   "theme": {
     "mode": "dark",
     "light": "Gruvbox Light Hard",
-    "dark": "Github Dark"
+    "dark": "Panda"
   }
 }

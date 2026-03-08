@@ -14,7 +14,8 @@
     "clins1994",
     "0xdhrv",
     "YourMCGeek",
-    "dhaydl"
+    "dhaydl",
+    "hugodemenez"
   ],
   "categories": [
     "Productivity",
@@ -36,6 +37,15 @@
           "description": "Show hidden files in the folder",
           "required": false,
           "default": false
+        },
+        {
+          "type": "checkbox",
+          "name": "showPreview",
+          "label": "Show Preview",
+          "title": "Show Preview",
+          "description": "Show the preview of the downloaded file or folder",
+          "required": false,
+          "default": true
         },
         {
           "type": "dropdown",
@@ -399,18 +409,18 @@
     ]
   },
   "dependencies": {
-    "@raycast/api": "^1.104.1",
+    "@raycast/api": "^1.104.3",
     "@raycast/utils": "^2.2.2",
+    "@types/react": "^19.2.14",
+    "typescript": "^5.9.3",
     "untildify": "^6.0.0"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^2.1.1",
     "@types/node": "^24.10.2",
-    "@types/react": "^19.2.7",
-    "eslint": "^9.39.1",
-    "prettier": "^3.7.4",
-    "react": "^19.2.1",
-    "typescript": "^5.9.3"
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1",
+    "react": "^19.2.1"
   },
   "scripts": {
     "build": "ray build -e dist",
