@@ -56,7 +56,7 @@ sketchybar --add item front_app left \
 
 sketchybar --add item media center \
            --set media icon=􀑪 script="$PLUGIN_DIR/media.sh" update_freq=5 max_chars=44 click_script="$PLUGIN_DIR/media.sh --open" background.drawing=on \
-           --subscribe media media_change system_woke mouse.clicked
+           --subscribe media media_change system_woke
 
 sketchybar --add bracket left_group front_app \
            --set left_group background.color=0x00000000
