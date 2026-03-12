@@ -4,10 +4,10 @@ state="$(defaults read /Library/Preferences/com.apple.Bluetooth ControllerPowerS
 
 if [ "$state" = "1" ]; then
   label="On"
-  icon="􀂯"
+  icon=""
 else
   label="Off"
-  icon="􀂱"
+  icon="󰂲"
 fi
 
 sketchybar --set "$NAME" icon="$icon" label="$label"

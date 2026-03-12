@@ -21,7 +21,7 @@ sketchybar --bar position=top \
 default=(
   updates=when_shown
   icon.font="Hack Nerd Font:Regular:14.0"
-  label.font="SF Pro Text:Regular:12.0"
+     label.font="SF Pro:Semibold:13"
   icon.color=$TEXT_MUTED
   label.color=$TEXT_PRIMARY
   icon.padding_left=6
@@ -33,11 +33,7 @@ default=(
   background.corner_radius=8
   background.height=24
   background.color=$ITEM_BG
-  background.drawing=on
-  background.shadow.drawing=on
-  background.shadow.color=0x66000000
-  background.shadow.distance=3
-  background.shadow.angle=90
+  background.drawing=off
 )
 sketchybar --default "${default[@]}"
 
@@ -45,12 +41,13 @@ sketchybar --default "${default[@]}"
 sketchybar --add item front_app left \
            --set front_app \
                 icon=􀤆 \
+       icon.font="SF Pro:Bold:16.0" \
                 script="$PLUGIN_DIR/front_app.sh" \
                 click_script="open -a \"$(osascript -e 'tell application \"System Events\" to get name of first process whose frontmost is true')\"" \
                 icon.color=$ACCENT \
                 label.color=$TEXT_PRIMARY \
-                label.font="SF Pro Text:Semibold:13.0" \
-                background.drawing=on \
+     label.font="SF Pro:Semibold:13" \
+       background.drawing=off \
                 background.color=$ITEM_BG \
                 background.corner_radius=10 \
                 background.height=24 \
@@ -59,7 +56,7 @@ sketchybar --add item front_app left \
            --subscribe front_app front_app_switched
 
 sketchybar --add item media center \
-           --set media icon=􀑪 script="$PLUGIN_DIR/media.sh" update_freq=5 max_chars=44 click_script="$PLUGIN_DIR/media.sh --open" background.drawing=on \
+     --set media icon=􀑪 script="$PLUGIN_DIR/media.sh" update_freq=5 max_chars=44 click_script="$PLUGIN_DIR/media.sh --open" background.drawing=off \
            --subscribe media media_change system_woke
 
 sketchybar --add bracket left_group front_app \
@@ -70,7 +67,7 @@ sketchybar --add item wifi right \
            --set wifi icon=􀙇 script="$PLUGIN_DIR/wifi.sh" update_freq=20 click_script="open x-apple.systempreferences:com.apple.Network-Settings.extension" label.drawing=off icon.padding_right=8
 
 sketchybar --add item bluetooth right \
-           --set bluetooth icon=􀂯 script="$PLUGIN_DIR/bluetooth.sh" update_freq=30 click_script="open x-apple.systempreferences:com.apple.BluetoothSettings" label.drawing=off icon.padding_right=8
+           --set bluetooth icon= script="$PLUGIN_DIR/bluetooth.sh" update_freq=30 click_script="open x-apple.systempreferences:com.apple.BluetoothSettings" label.drawing=off icon.padding_right=8
 
 sketchybar --add item volume right \
            --set volume icon=􀊩 script="$PLUGIN_DIR/volume.sh" update_freq=0 click_script="open x-apple.systempreferences:com.apple.Sound-Settings.extension" label.drawing=off icon.padding_right=10 \
