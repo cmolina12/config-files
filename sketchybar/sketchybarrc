@@ -3,8 +3,8 @@
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 
 # Neutral palette (charcoal + soft grays)
-BAR_COLOR=0xe61c1e22
-ITEM_BG=0xff2a2d34
+BAR_COLOR=0x00000000
+ITEM_BG=0xcc2a2d34
 TEXT_PRIMARY=0xffe5e7eb
 TEXT_MUTED=0xff9ca3af
 ACCENT=0xffd1d5db
@@ -15,7 +15,7 @@ sketchybar --bar position=top \
                  border_color=0x00000000 \
                  padding_left=8 \
                  padding_right=8 \
-                 blur_radius=30 \
+                 blur_radius=0 \
                  shadow=off
 
 default=(
@@ -33,7 +33,11 @@ default=(
   background.corner_radius=8
   background.height=24
   background.color=$ITEM_BG
-  background.drawing=off
+  background.drawing=on
+  background.shadow.drawing=on
+  background.shadow.color=0x66000000
+  background.shadow.distance=3
+  background.shadow.angle=90
 )
 sketchybar --default "${default[@]}"
 
